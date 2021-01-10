@@ -39,7 +39,7 @@ verifyOtp = (req,res) => {
                         patients : [], image : "https://www.pngkey.com/png/full/230-2301779_best-classified-apps-default-user-profile.png",
                         specialization : "",address : "",country : "",pinCode : "",
                         alternateContact : "",joined : Date.now(),FacebookUrl: "",TwitterUrl: "",
-                        InstagramUrl: "", LinkedinUrl: "",completedVaccinations : [],appointmentFee : "INR 0",
+                        InstagramUrl: "", LinkedinUrl: "",completedVaccinations : [],appointmentFee : "0 D.T",
                         age : "", pictures : [], education : [], experience : [],notifications : []
                     }, foundOTP.password, (err ,newUser ) => {
                         if(err){

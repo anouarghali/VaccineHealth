@@ -42,7 +42,7 @@ function editProfilePic(req,res){
                                     req.flash("error","Unexpected Error Occured!!!")
                                     res.redirect("indexDocter")
                                 }else{
-                                    req.flash("success","Profile Picture Uploaded Successfully!!!")
+                                    req.flash("success","Photo de profil téléchargée avec succès!!! »")
                                     res.redirect("indexDocter")
                                 }
                             } )

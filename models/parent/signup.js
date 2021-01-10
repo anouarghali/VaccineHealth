@@ -41,7 +41,7 @@ signup = (req, res) => {
                                 const mailOpts = {
                                     from: "ryzit1@gmail.com",
                                     to: req.body.email,
-                                    subject: 'Verify Email Address',
+                                    subject: 'Vérifier l’adresse e-mail',
                                     text: "Hi," + "\n\n" + 
                                     "To proceed further with your account verification at VaccineHealth , Please use the 6-digit OTP given below.This OTP is only valid for 60 minutes"
                                     + "\n\n" + 

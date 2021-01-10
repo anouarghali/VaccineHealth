@@ -13,7 +13,7 @@
                               </div>
                               <div class="text-center mt-3 pl-3 pr-3">
                                  <h4><b><%= docter.username %> </b></h4>
-                                 <p>Doctor</p>
+                                 <p>Médecin</p>
                                  <p class="mb-0"> Specialization in <%= docter.specialization %> </p>
                               </div>
                               <hr>
@@ -24,7 +24,7 @@
                                   </li>
                                   <li class="text-center">
                                     <h3><%= docter.appointmentFee %></h3>
-                                    <span>Appointment Fee</span>
+                                    <span>Frais de rendez-vous</span>
                                   </li>
                               </ul>
                            </div>
@@ -33,13 +33,13 @@
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Personal Information</h4>
+                              <h4 class="card-title">Renseignements personnels </h4>
                            </div>
                         </div>
                         <div class="iq-card-body">
                            <div class="about-info m-0 p-0">
                               <div class="row">
-                                 <div class="col-4">First Name:</div>
+                                 <div class="col-4">Prénom:</div>
                                  <% if(docter.fname){ %>
                                     <% var firstName = docter.fname; var lastName = docter.lname %>
                                  <% }else{ %>
@@ -54,17 +54,15 @@
                                  <% } %>
                                  <div class="col-8"> <%= firstName %> </div>
                                  <% if( indexOfSpace != -1 ){ %>
-                                    <div class="col-4">Last Name:</div>
+                                    <div class="col-4">Nom:</div>
                                     <div class="col-8"> <%= lastName %> </div>
                                  <% } %>
-                                 <div class="col-4">Mobile  Number:</div>
+                                 <div class="col-4">Numéro:</div>
                                  <div class="col-8"> <%= docter.mobileNumber %> </div>
-                                 <div class="col-4">Country :</div>
-                                 <div class="col-8"> <%= docter.country %> </div>
                                  <% if(!docter.patients.includes(child._id)){ %>
                                     <div class="col-12"> 
                                        <a  href="appointDocter-<%=docter._id%>-For-<%=child._id%>" style="width: 40%; margin-left: 25% ;margin-top: 20px;" 
-                                          class="btn btn-outline-primary"> Take Appointment 
+                                          class="btn btn-outline-primary"> Rendez-vous
                                        </a>
                                     </div>
                                  <% } %>
@@ -79,17 +77,16 @@
                            <div class="iq-card">
                               <div class="iq-card-header d-flex justify-content-between">
                                  <div class="iq-header-title">
-                                    <h4 class="card-title">Education</h4>
+                                    <h4 class="card-title">Education<</h4>
                                  </div>
                               </div>
                             <div class="iq-card-body"> 
                             <table class="table mb-0 table-borderless">
                             <thead>
                                 <tr>
-                                        <th scope="col">Year</th>
-                                        <th scope="col">Degree</th>
-                                        <th scope="col">Institute</th>
-                                        <th scope="col">Result</th>
+                                        <th scope="col">Année</th>
+                                        <th scope="col">Diplome</th>
+                                        <th scope="col">Institut</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -98,7 +95,6 @@
                                         <td> <%= eachOne.year %> </td>
                                         <td> <%= eachOne.degree %> </td>
                                         <td> <%= eachOne.institute %> </td>
-                                        <td><span class="badge badge-success"> <%= eachOne.result %> </span></td>
                                     </tr>
                                 <% } ) %>
                             </tbody>
@@ -110,17 +106,17 @@
                            <div class="iq-card">
                               <div class="iq-card-header d-flex justify-content-between">
                                  <div class="iq-header-title">
-                                    <h4 class="card-title">Experience</h4>
+                                    <h4 class="card-title">Expérience</h4>
                                  </div>
                               </div>
                                  <div class="iq-card-body">
                                     <table class="table mb-0 table-borderless">
                                     <thead>
                                        <tr>
-                                             <th scope="col">Year</th>
-                                             <th scope="col">Department</th>
+                                             <th scope="col">Année</th> 
+                                             <th scope="col">Département</th>
                                              <th scope="col">Position</th>
-                                             <th scope="col">Hospital</th>
+                                             <th scope="col">Hôpital</th>
                                        </tr>
                                     </thead>
                                     <tbody>

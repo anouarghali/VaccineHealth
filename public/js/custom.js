@@ -1,5 +1,5 @@
 /*
-Template: XRay - Responsive Bootstrap 4 Admin Dashboard Template
+Template: XRay - Responsive Bootstrap 4 Admin Tableau de bord Template
 Author: iqonicthemes.in
 Design and Developed by: iqonicthemes.in
 NOTE: This file contains the styling for responsive Template.

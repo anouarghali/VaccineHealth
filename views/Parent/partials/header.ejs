@@ -13,7 +13,7 @@
           <div class="iq-sidebar-logo d-flex justify-content-between">
              <a href="/indexParent">
              <img src="assets/images/logo/favicon.png" class="img-fluid" alt="">
-             <span>VaccineHealth</span>
+             <span>NoraVax</span>
              </a>
              <div class="iq-menu-bt-sidebar">
                    <div class="iq-menu-bt align-self-center">
@@ -25,9 +25,9 @@
           <div id="sidebar-scrollbar">
              <nav class="iq-sidebar-menu">
                 <ul id="iq-sidebar-toggle" class="iq-menu">
-                   <li class="iq-menu-title"><span>Dashboard</span></li>
+                   <li class="iq-menu-title"><span>Tableau de bord</span></li>
                    <li class="active">
-                      <a href="/indexParent" class="iq-waves-effect"><i class="ri-hospital-fill"></i><span>Dashboard</span></a>
+                      <a href="/indexParent" class="iq-waves-effect"><i class="ri-hospital-fill"></i><span>Tableau de bord</span></a>
                    </li>                     
                  
                    <li >
@@ -35,7 +35,7 @@
                       <h3 style="color: white;margin-left: 10%; "> <%= parent.username %> </h3>
                    </li>
                   <li style="margin-top: 20px;">
-                     <a style="width : 100%;min-width: 65px;text-align: center;" href="/logout-Parent" class="btn btn-danger"> Logout </a>
+                     <a style="width : 100%;min-width: 65px;text-align: center;" href="/logout-Parent" class="btn btn-danger"> Déconnectez </a>
                    </li>  
                 </ul>
              </nav>
@@ -52,7 +52,7 @@
                 <div class="top-logo">
                    <a href="/indexParent" class="logo">
                    <img src="assets/images/logo/favicon.png" class="img-fluid" alt="">
-                   <span>Xamine</span>
+                   <span>NoraVax</span>
                    </a>
                 </div>
              </div>
@@ -83,7 +83,7 @@
                             <div class="iq-card shadow-none m-0">
                                <div class="iq-card-body p-0 ">
                                   <div class="bg-primary p-3">
-                                     <h5 class="mb-0 text-white">All Notifications<small class="badge  badge-light float-right pt-1"> <%= parent.notifications.length %>  </small></h5>
+                                     <h5 class="mb-0 text-white">Notifications<small class="badge  badge-light float-right pt-1"> <%= parent.notifications.length %>  </small></h5>
                                   </div>
                                   <% parent.notifications.forEach( eachNotification => { %>
                                     <a href="#" class="iq-sub-card" >
@@ -111,15 +111,15 @@
                          <img src="<%=parent.image%>" class="img-fluid rounded mr-3" alt="user">
                          <div class="caption">
                             <h6 class="mb-0 line-height"> <%= parent.username %> </h6>
-                            <span class="font-size-12">Available</span>
+                            <span class="font-size-12">Disponible</span>
                          </div>
                       </a>
                       <div class="iq-sub-dropdown iq-user-dropdown">
                          <div class="iq-card shadow-none m-0">
                             <div class="iq-card-body p-0 ">
                                <div class="bg-primary p-3">
-                                  <h5 class="mb-0 text-white line-height">Hello <%= parent.username %>  </h5>
-                                  <span class="text-white font-size-12">Available</span>
+                                  <h5 class="mb-0 text-white line-height">Bonjour <%= parent.username %>  </h5>
+                                  <span class="text-white font-size-12">Disponible</span>
                                </div>
                                <a href="/indexParent" class="iq-sub-card iq-bg-primary-hover">
                                   <div class="media align-items-center">
@@ -127,8 +127,8 @@
                                         <i class="ri-file-user-line"></i>
                                      </div>
                                      <div class="media-body ml-3">
-                                        <h6 class="mb-0 ">Home Page</h6>
-                                        <p class="mb-0 font-size-12">View home page</p>
+                                        <h6 class="mb-0 ">Accueil</h6>
+                                        <p class="mb-0 font-size-12">Voir Accueil</p>
                                      </div>
                                   </div>
                                </a>
@@ -138,8 +138,8 @@
                                         <i class="ri-profile-line"></i>
                                      </div>
                                      <div class="media-body ml-3">
-                                        <h6 class="mb-0 ">Edit Profile</h6>
-                                        <p class="mb-0 font-size-12">Modify your personal details.</p>
+                                        <h6 class="mb-0 ">Modifier le profil</h6>
+                                        <p class="mb-0 font-size-12">Modifiez vos données personnelles.</p>
                                      </div>
                                   </div>
                                </a>

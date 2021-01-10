@@ -13,18 +13,18 @@
                               </div>
                               <div class="text-center mt-3 pl-3 pr-3">
                                  <h4><b><%= docter.username %> </b></h4>
-                                 <p>Doctor</p>
-                                 <p class="mb-0"> Specialization in <%= docter.specialization %> </p>
+                                 <p>Médecin</p>
+                                 <p class="mb-0"> Specialist <%= docter.specialization %> </p>
                               </div>
                               <hr>
                               <ul class="doctoe-sedual d-flex align-items-center justify-content-between p-0 m-0">
                                  <li class="text-center">
                                     <h3 class="counter"><%= docter.patientsOnTreatment %></h3>
-                                    <span>Children on vaccination </span>
+                                    <span>Enfants vaccinés</span>
                                   </li>
                                   <li class="text-center">
                                     <h3><%= docter.appointmentFee %></h3>
-                                    <span>Appointment Fee</span>
+                                    <span>Frais de rendez-vous</span>
                                   </li>
                               </ul>
                            </div>
@@ -33,13 +33,13 @@
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Personal Information</h4>
+                              <h4 class="card-title">Renseignements personnels</h4>
                            </div>
                         </div>
                         <div class="iq-card-body">
                            <div class="about-info m-0 p-0">
                               <div class="row">
-                                 <div class="col-4">First Name:</div>
+                                 <div class="col-4">Prénom:</div>
                                  <% if(docter.fname){ %>
                                     <% var firstName = docter.fname; var lastName = docter.lname %>
                                  <% }else{ %>
@@ -54,15 +54,13 @@
                                  <% } %>
                                  <div class="col-8"> <%= firstName %> </div>
                                  <% if( indexOfSpace != -1 ){ %>
-                                    <div class="col-4">Last Name:</div>
+                                    <div class="col-4">Nom</div>
                                     <div class="col-8"> <%= lastName %> </div>
                                  <% } %>
                                  <div class="col-4">Age:</div>
                                  <div class="col-8"> <%= docter.age %>  </div>
-                                 <div class="col-4">Mobile  Number:</div>
+                                 <div class="col-4">Téléphone:</div>
                                  <div class="col-8"> <%= docter.mobileNumber %> </div>
-                                 <div class="col-4">Country :</div>
-                                 <div class="col-8"> <%= docter.country %> </div>
                               </div>
                            </div>
                         </div>
@@ -95,19 +93,18 @@
                               </div>
                               <% if(docter.education.length == 0){ %>
                                  <div class="iq-card-body">
-                                    <h6> No education data added yet!!! </h6>
-                                    <button id="showEduForm" class="form-group btn btn-warning">Add Data</button>
+                                    <h6>Aucune donnée sur l’éducation n’a encore été ajoutée</h6>
+                                    <button id="showEduForm" class="form-group btn btn-warning">Ajouter des données </button>
                                  </div>
                               <% }else{ %>
                                  <div class="iq-card-body"> 
-                                    <button id="showEduForm" class="form-group btn btn-warning">Add Data</button>
+                                    <button id="showEduForm" class="form-group btn btn-warning">Ajouter des données </button>
                                     <table class="table mb-0 table-borderless">
                                     <thead>
                                        <tr>
-                                             <th scope="col">Year</th>
-                                             <th scope="col">Degree</th>
-                                             <th scope="col">Institute</th>
-                                             <th scope="col">Result</th>
+                                             <th scope="col">Année</th>
+                                             <th scope="col">Diplôme</th>
+                                             <th scope="col">Institut</th>
                                        </tr>
                                     </thead>
                                     <tbody>
@@ -117,10 +114,10 @@
                                              <td> <%= eachOne.year %> </td>
                                              <td> <%= eachOne.degree %> </td>
                                              <td> <%= eachOne.institute %> </td>
-                                             <td><span class="badge badge-success"> <%= eachOne.result %> </span></td>
+                                          
                                              <td> 
                                                 <form action="/deleteEdu-<%=eduIndex%>?_method=PUT" method="POST">
-                                                   <button class="btn btn-danger" > Delete </button>
+                                                   <button class="btn btn-danger" >Supprimer </button>
                                                 </form>
                                            </td>
                                           </tr>
@@ -133,27 +130,23 @@
                               <div class="iq-card" id="formEducation">
                                  <div class="iq-card-header d-flex justify-content-between">
                                     <div class="iq-header-title">
-                                       <h4 class="card-title">Add Education Info</h4>
+                                       <h4 class="card-title">Ajouter des informations sur l’éducation</h4>
                                     </div>
                                  </div>
                                  <div class="iq-card-body">
                                     <form action="/addEducationInfo?_method=PUT" method="POST" >
                                        <div class=" row align-items-center">
                                           <div class="form-group col-sm-12">
-                                             <label for="degree">Degree</label>
+                                             <label for="degree">Diplôme</label>
                                              <input type="text" name="degree" required placeholder="Degree" class="form-control" id="degree">
                                           </div>
                                           <div class="form-group col-sm-12">
-                                             <label for="institute">Institute</label>
-                                             <input type="text" class="form-control" required placeholder="Institute Name" name="institute" id="institute">
+                                             <label for="institute">Institut</label>
+                                             <input type="text" class="form-control" required placeholder="Institut" name="institute" id="institute">
                                           </div>
                                           <div class="form-group col-sm-6">
-                                             <label for="yearOfQ">Year of qualification</label>
-                                             <input type="number" name="yearOfQ" required placeholder="Year of qualification" class="form-control" id="yearOfQ">
-                                          </div>
-                                          <div class="form-group col-sm-6">
-                                             <label for="result">Result:</label>
-                                             <input type="text" name="result" required placeholder="Result" class="form-control" id="result">
+                                             <label for="yearOfQ">années de qualification</label>
+                                             <input type="number" name="yearOfQ" required placeholder="Années de qualification" class="form-control" id="yearOfQ">
                                           </div>
                                        </div>
                                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
@@ -172,20 +165,19 @@
                               </div>
                               <% if(docter.experience.length == 0){ %>
                                  <div class="iq-card-body">
-                                    <h6> No experience data added yet!!! </h6>
-                                    <button id="showExpForm" class="form-group btn btn-warning">Add Data</button>
+                                    <h6>  Aucune donnée d’expérience n’a encore été ajoutée!!! </h6>
+                                    <button id="showExpForm" class="form-group btn btn-warning">Ajouter des données</button>
                                  </div>
                               <% }else{ %>
                                  <div class="iq-card-body">
-                                    <button id="showExpForm" class="form-group btn btn-warning">Add Data</button>
+                                    <button id="showExpForm" class="form-group btn btn-warning">Ajouter des données</button>
                                     <table class="table mb-0 table-borderless">
                                     <thead>
                                        <tr>
-                                             <th scope="col">Year</th>
-                                             <th scope="col">Department</th>
+                                             <th scope="col">Année</th>
+                                             <th scope="col">Département</th>
                                              <th scope="col">Position</th>
-                                             <th scope="col">Hospital</th>
-                                             <th scope="col">Feedback</th>
+                                             <th scope="col">Hôpital</th>
                                        </tr>
                                     </thead>
                                     <tbody>
@@ -196,10 +188,9 @@
                                              <td> <%= eachOne.department %> </td>
                                              <td> <%= eachOne.position %>  </td>
                                              <td> <%= eachOne.hospital %>  </td>
-                                             <td><span class="badge badge-primary"> <%= eachOne.feedback %> </span></td>
                                              <td> 
                                                 <form action="/deleteExp-<%=Index%>?_method=PUT" method="POST">
-                                                   <button class="btn btn-danger" > Delete </button>
+                                                   <button class="btn btn-danger" > Supprimer </button>
                                                 </form>
                                              <% Index = Index + 1 %>
                                           </tr>
@@ -211,41 +202,37 @@
                               <div class="iq-card" id="formExperience">
                                  <div class="iq-card-header d-flex justify-content-between">
                                     <div class="iq-header-title">
-                                       <h4 class="card-title">Add Experience Info</h4>
+                                       <h4 class="card-title">Ajouter des informations d’expérience</h4>
                                     </div>
                                  </div>
                                  <div class="iq-card-body">
                                     <form action="/addExpInfo?_method=PUT" method="POST" >
                                        <div class=" row align-items-center">
                                           <div class="form-group col-sm-4">
-                                             <label for="yearOfQ">Year</label>
+                                             <label for="yearOfQ">Année</label>
                                              <input type="text" name="yearOfQ" required placeholder="e.g. 2010-2014" class="form-control" id="yearOfQ">
                                           </div>
                                           <div class="form-group col-sm-8">
-                                             <label for="dept">Department</label>
-                                             <input type="text" name="dept" required placeholder="Department" class="form-control" id="dept">
-                                          </div>
-                                          <div class="form-group col-sm-4">
-                                             <label for="feedback">Feedback</label>
-                                             <input type="text" class="form-control" required placeholder="Feedback in max of 2 words" name="feedback" id="feedback">
+                                             <label for="dept">Département</label>
+                                             <input type="text" name="dept" required placeholder="Département" class="form-control" id="dept">
                                           </div>
                                           <div class="form-group col-sm-8">
-                                             <label for="hospital">Hospital:</label>
+                                             <label for="hospital">Hôpital:</label>
                                              <input type="text" name="hospital" required placeholder="Hospital" class="form-control" id="hospital">
                                           </div>
                                           <div class="form-group col-sm-4">
                                              <label>Position:</label>
                                              <select class="form-control" required name="position" id="exampleFormControlSelect4">
-                                                <option selected="">Senior Docter</option>
-                                                <option>Patient Services Assistant</option>
-                                                <option>Surgeon</option>
-                                                <option>Nurse</option>
+                                                <option selected="">Medecin principal</option>
+                                                <option>Assistante des services aux patients</option>
+                                                <option>Chirurgien</option>
+                                                <option>Infirmière</option>
                                                 <option>Clinal Assistant</option>
                                              </select>
                                           </div>
                                        </div>
-                                       <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                       <button id="cancelExpForm" type="reset" class="btn iq-bg-danger">Cancel</button>
+                                       <button type="submit" class="btn btn-primary mr-2">Envoyer</button>
+                                       <button id="cancelExpForm" type="reset" class="btn iq-bg-danger">Annuler</button>
                                     </form>
                                  </div>
                               </div>

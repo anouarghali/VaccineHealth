@@ -9,17 +9,17 @@
                               <ul class="iq-edit-profile d-flex nav nav-pills">
                                  <li class="col-md-4 p-0">
                                     <a class="nav-link active" data-toggle="pill" href="#personal-information">
-                                    Personal Information
+                                    Renseignements personnels
                                     </a>
                                  </li>
                                  <li class="col-md-4 p-0">
                                     <a class="nav-link action" data-toggle="pill" href="#chang-image">
-                                    Profile Picture
+                                       Photo de profil
                                     </a>
                                  </li>
                                  <li class="col-md-4 p-0">
                                     <a class="nav-link" data-toggle="pill" href="#chang-pwd">
-                                    Change Password
+                                      Changer de mot de passe
                                     </a>
                                  </li>
                               </ul>
@@ -34,22 +34,22 @@
                               <div class="iq-card">
                                  <div class="iq-card-header d-flex justify-content-between">
                                     <div class="iq-header-title">
-                                       <h4 class="card-title">Personal Information</h4>
+                                       <h4 class="card-title">Renseignements personnels</h4>
                                     </div>
                                  </div>
                                  <div class="iq-card-body">
                                     <form action="/editParentPersonal?_method=PUT" method="POST" >
                                        <div class=" row align-items-center">
                                           <div class="form-group col-sm-6">
-                                             <label for="fname">First Name:</label>
+                                             <label for="fname">Prénom:</label>
                                              <input type="text" name="fname" required placeholder="First Name" class="form-control" id="fname" value="<%=parent.fname%>">
                                           </div>
                                           <div class="form-group col-sm-6">
-                                             <label for="lname">Last Name:</label>
+                                             <label for="lname">Nom de famille::</label>
                                              <input type="text" name="lname" required placeholder="Last Name" class="form-control" id="lname" value="<%=parent.lname%>">
                                           </div>
                                           <div class="form-group col-sm-6">
-                                             <label for="cname">City:</label>
+                                             <label for="cname">Ville:</label>
                                              <input type="text" name="city" required placeholder="City" class="form-control" id="cname" value="<%=parent.city%>">
                                           </div>
                                           <div class="form-group col-sm-6">
@@ -57,29 +57,10 @@
                                              <input  class="form-control" required placeholder="Age" name="age" id="age" value="<%=parent.age%>">
                                           </div>
                                           <div class="form-group col-sm-6">
-                                             <label>Pincode:</label>
+                                             <label>code postal:</label>
                                              <input type="number" class="form-control" required placeholder="Pincode" name="pinCode" id="pinCode" pattern=".{6}" value="<%=parent.pinCode%>">
                                           </div>
-                                          <div class="form-group col-sm-6">
-                                             <label>Country:</label>
-                                             <select  class="form-control" required name="country" id="exampleFormControlSelect3">
-                                                <option>Canada</option>
-                                                <option>AMERICA</option>
-                                                <option selected="">INDIA</option>
-                                                <option>USA</option>
-                                                <option>Africa</option>
-                                             </select>
-                                          </div>
-                                          <div class="form-group col-sm-6">
-                                             <label>State:</label>
-                                             <select class="form-control" required name="state" id="exampleFormControlSelect4">
-                                                <option>Delhi</option>
-                                                <option>Jind</option>
-                                                <option selected="">MAHARASHTRA</option>
-                                                <option>London</option>
-                                                <option>Kolkata</option>
-                                             </select>
-                                          </div>
+                                          
                                           <div class="form-group col-sm-12">
                                              <label>Address:</label>
                                              <textarea required class="form-control" required name="address" rows="5" style="line-height: 22px;">
@@ -87,8 +68,8 @@
                                              </textarea>
                                           </div>
                                        </div>
-                                       <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                       <button type="reset" class="btn iq-bg-danger">Cancel</button>
+                                       <button type="submit" class="btn btn-primary mr-2">Envoyer</button>
+                                       <button type="reset" class="btn iq-bg-danger">Annuler</button>
                                     </form>
                                  </div>
                               </div>
@@ -97,26 +78,26 @@
                               <div class="iq-card">
                                  <div class="iq-card-header d-flex justify-content-between">
                                     <div class="iq-header-title">
-                                       <h4 class="card-title">Change Password</h4>
+                                       <h4 class="card-title">Changer de mot de passe/h4>
                                     </div>
                                  </div>
                                  <div class="iq-card-body">
                                     <form>
                                        <div class="form-group">
-                                          <label for="cpass">Current Password:</label>
-                                          <a href="javascripe:void();" class="float-right">Forgot Password</a>
+                                          <label for="cpass">Mot de passe actuel::</label>
+                                          <a href="javascripe:void();" class="float-right">J'ai oublié mon mot de passe</a>
                                           <input type="Password" class="form-control" id="cpass" value="">
                                        </div>
                                        <div class="form-group">
-                                          <label for="npass">New Password:</label>
+                                          <label for="npass">Nouveau mot de passe:</label>
                                           <input type="Password" class="form-control" id="npass" value="">
                                        </div>
                                        <div class="form-group">
                                           <label for="vpass">Verify Password:</label>
                                           <input type="Password" class="form-control" id="vpass" value="">
                                        </div>
-                                       <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                       <button type="reset" class="btn iq-bg-danger">cancel</button>
+                                       <button type="submit" class="btn btn-primary mr-2">Envoyer</button>
+                                       <button type="reset" class="btn iq-bg-danger">Annuler</button>
                                     </form>
                                  </div>
                               </div>
@@ -125,7 +106,7 @@
                               <div class="iq-card">
                                  <div class="iq-card-header d-flex justify-content-between">
                                     <div class="iq-header-title">
-                                       <h4 class="card-title">Change Profile Picture</h4>
+                                       <h4 class="card-title">Modifier la photo de profil</h4>
                                     </div>
                                  </div>
                                  <div class="iq-card-body">
@@ -141,8 +122,8 @@
                                              </div>
                                           </div>
                                        </div>
-                                       <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                       <button type="reset" class="btn iq-bg-danger">Cancel</button>
+                                       <button type="submit" class="btn btn-primary mr-2">Envoyer</button>
+                                       <button type="reset" class="btn iq-bg-danger">Annuler</button>
                                     </form>
                                  </div>
                               </div>

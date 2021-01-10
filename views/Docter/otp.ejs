@@ -1,12 +1,12 @@
 <%- include('../partials/sign/header') %>
             <div class="col-md-6 position-relative">
                 <div class="sign-in-from">
-                    <h2 class="mb-0">Email Address Verification</h2>
-                    <h4>An OTP has been sent to your email ending with 
+                    <h2 class="mb-0">Vérification de l’adresse e-mailn</h2>
+                    <h4>Un mot de passe unique a été envoyé à votre e-mail se terminant par
                         ********<%=email.slice(email.length-14,email.length)%></h4>
-                    <form class="mt-4" method="POST" action="/verifyEmailDocter-<%=otpId%> ">
+                    <form class="mt-4" method="POST" action="/verifyEmailParent-<%=otpId%> ">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Enter OTP</label>
+                            <label for="exampleInputEmail1">Entrez le mot de passe unique</label>
                             <input type="number" name="enteredOtp" class="form-control mb-0" id="exampleInputEmail1" placeholder="One Time Password">
                         </div>
                         <% if(error != undefined && error.length > 0){ %>
@@ -21,16 +21,16 @@
                             </div>
                         <% } %>
                         <div class="d-inline-block w-100">
-                            <button class="btn btn-primary float-right" type="submit">Sign Up</button>
+                            <button class="btn btn-primary float-right" type="submit">S'enregistrer </button>
                         </div>
                         
                         <div class="sign-info">
-                            <span class="dark-color d-inline-block line-height-2">Already Have Account ? 
-                                <a href="/signinDocter">Log In</a>
+                            <span class="dark-color d-inline-block line-height-2">Vous avez déjà un compte ?
+                                <a href="/signinParent">Connectez-vous</a>
                             </span>
                             <ul class="iq-social-media">
-                                <li><a href="#"><i class="fas fa-home" aria-hidden="true"></i></a></li>
-                                <li><a href="/">Home</a></li>
+                                <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                                <li><a href="/">Accueil</a></li>
                             </ul>
                         </div>
                     </form>

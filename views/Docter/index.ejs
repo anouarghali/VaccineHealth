@@ -11,7 +11,7 @@
                                        <span class="bg-primary" data-percent="70"></span>
                                    </div>
                                  <span class="line-height-4"> <%- docter.patients.length - docter.completedVaccinations.length %> </span>
-                                 <h4 class="mb-2 mt-2">Enrolled Children</h4>
+                                 <h4 class="mb-2 mt-2">Enfants inscrits</h4>
                                  <p class="mb-0 text-secondary line-height">*******</p>
                               </div>
                            </div>
@@ -28,7 +28,7 @@
                                        <span class="bg-danger" data-percent="<%=p2%>"></span>
                                    </div>
                                  <span class="line-height-4"> <%= docter.patients.length %> </span>
-                                 <h4 class="mb-2 mt-2">Vaccines Going On</h4>
+                                 <h4 class="mb-2 mt-2">Vaccins en cours</h4>
                                  <p class="mb-0 text-secondary line-height">*******</p>
                               </div>
                            </div>
@@ -45,7 +45,7 @@
                                    <span class="bg-warning" data-percent="<%=p3%>"></span>
                                    </div>
                                  <span class="line-height-4"> <%= docter.completedVaccinations.length %> </span>
-                                 <h4 class="mb-2 mt-2"> Vaccines Completed</h4>
+                                 <h4 class="mb-2 mt-2"> Vaccins administrés </h4>
                                  <p class="mb-0 text-secondary line-height">*******</p>
                               </div>
                            </div>
@@ -61,19 +61,20 @@
                               </div>
                               <div class="text-center mt-3">
                                  <h4><b> <%= docter.username %> </b></h4>
-                                 <p> Specialization in <%= docter.specialization %> </p>
-                                 <p>  Joined <%= docter.joined %>   </p>
+                                 <p> Specialist <%= docter.specialization %> </p>
+                                 <p>  A Rejoint le <%= docter.joined %>   </p>
                                  <a href="/profileDocter" class="btn btn-primary">Profile</a>
                               </div>
                               <hr>
                               <ul class="doctoe-sedual d-flex align-items-center justify-content-between p-0">
                                  <li class="text-center">
                                     <h3> <%- docter.patients.length - docter.completedVaccinations.length %> </h3>
-                                    <span> Children on vaccination </span>
+                                    <span>Enfants vaccinés</span>
+                                    
                                   </li>
                                   <li class="text-center">
                                     <h3> <%= docter.appointmentFee %> </h3>
-                                    <span>Appointment Fee</span>
+                                    <span>Frais de rendez-vous</span>
                                   </li>
                               </ul>
                            </div>
@@ -84,7 +85,7 @@
                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Upcoming Installations</h4>
+                              <h4 class="card-title">à venir</h4>
                            </div>
                         </div>
                         <div class="iq-card-body smaill-calender-home">
@@ -95,14 +96,14 @@
                   <div class="col-lg-4">
                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height-half">
                         <div class="iq-card-body">
-                           <h6>Service Given (THIS YEAR)</h6>
+                           <h6>Service donné (cette année)</h6>
                            <h3><b>507</b></h3>
                         </div>
                         <div id="wave-chart-7"></div>
                      </div>
                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height-half">
                         <div class="iq-card-body">
-                           <h6>New Installations (THIS YEAR)</h6>
+                           <h6>Nouvelles installations (cette année)</h6>
                            <h3><b>120</b></h3>
                         </div>
                         <div id="wave-chart-8"></div>
@@ -114,7 +115,7 @@
                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Ongoing Vaccines </h4>
+                              <h4 class="card-title">Vaccins en cours </h4>
                            </div>
                            <div class="iq-card-header-toolbar d-flex align-items-center">
                               <div class="dropdown">
@@ -122,11 +123,11 @@
                                  <i class="ri-more-fill"></i>
                                  </span>
                                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton5">
-                                    <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Print</a>
-                                    <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
+                                    <a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>Voir</a>
+                                    <a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Supprimer</a>
+                                    <a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Modifier</a>
+                                    <a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Imprimer</a>
+                                    <a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Télécharger</a>
                                  </div>
                               </div>
                            </div>
@@ -153,7 +154,7 @@
                                                  </li>
                                             </ul>
                                           </div>
-                                          <a href="viewChild-<%=eachChild._id%>" class="btn btn-primary">View Profile</a>
+                                          <a href="viewChild-<%=eachChild._id%>" class="btn btn-primary">Afficher le profil</a>
                                        </div>
                                     </div>
                                  </div>

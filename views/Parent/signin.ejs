@@ -1,17 +1,16 @@
 <%- include('../partials/sign/header') %>
             <div class="col-md-6 position-relative">
                 <div class="sign-in-from">
-                    <h1 class="mb-0">Parent Sign in</h1>
-                    <p>Enter your username and password to access admin panel.</p>
+                    <h1 class="mb-0">Connexion Parent</h1>
+                    <p>Entrez votre nom d’utilisateur et mot de passe</p>
                     <form class="mt-4" method="POST" action="/signinParent" >
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Username</label>
-                            <input type="text" name="username" class="form-control mb-0" id="exampleInputEmail1" placeholder="Enter Username">
+                            <label for="exampleInputEmail1">Nom d’utilisateur </label>
+                            <input type="text" name="username" class="form-control mb-0" id="exampleInputEmail1" placeholder="Votre nom d’utilisateur ">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <a href="/dummyCredential" class="float-right">Request For Dummy Credentials?</a>
-                            <input type="password" name="password" class="form-control mb-0" id="exampleInputPassword1" placeholder="Password">
+                            <label for="exampleInputPassword1">Mot de passe</label>
+                            <input type="password" name="password" class="form-control mb-0" id="exampleInputPassword1" placeholder="Votre mot de passe">
                         </div>
                         <% if(error != undefined && error.length > 0){ %>
                             <div class="alert alert-danger text-center">
@@ -27,14 +26,14 @@
                         <div class="d-inline-block w-100">
                             <div class="custom-control custom-checkbox d-inline-block mt-2 pt-1">
                                 <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1">Remember Me</label>
+                                <label class="custom-control-label" for="customCheck1">Rester connecté</label>
                             </div>
-                            <button  type="submit" class="btn btn-primary float-right">Sign in</button>
+                            <button  type="submit" class="btn btn-primary float-right">Connexion</button>
                         </div>
                         <div class="sign-info">
-                            <span class="dark-color d-inline-block line-height-2">Don't have an account? <a href="/signupParent">Sign up</a></span>
+                            <span class="dark-color d-inline-block line-height-2">Vous n’avez pas de compte? <a href="/signupParent">S'enregistrer</a></span>
                             <ul class="iq-social-media">
-                                <li><a href="/">Home</a></li>
+                                <li><a href="/">Accueil</a></li>
                             </ul>
                         </div>
                     </form>

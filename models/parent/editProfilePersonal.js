@@ -27,7 +27,7 @@ editPersonal = (req, res) => {
                             req.flash("error","Unexpected Error Occurs!!!")
                             res.redirect("indexParent")
                         }else{
-                            req.flash("success","Data Updated Successfully!!!")
+                            req.flash("success","Données mises à jour avec succès!!!")
                             res.redirect("indexParent")
                         }
                     } )

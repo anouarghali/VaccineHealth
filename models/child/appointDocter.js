@@ -42,7 +42,7 @@ makePayment = (req,res) => {
                                         list.push(foundChild)
                                         foundDocter.patients = list
                                         var newNotification = {
-                                            what : foundChild.fname + "  " + foundChild.lname + " has appointed you." , 
+                                            what : foundChild.fname + "  " + foundChild.lname + " vous a nommé." , 
                                             when : Date.now(),image : foundChild.image
                                         }
                                         if(foundDocter.notifications.length == 5 ){
@@ -61,7 +61,7 @@ makePayment = (req,res) => {
                                                         req.flash("error","UNEXPECTED ERROR OCCURED!!!")
                                                         res.redirect("childInfo-" + req.params.childId)
                                                     }else{
-                                                        req.flash("success",updatedDocter.username + " has been appointed to" + updatedChild.fname)
+                                                        req.flash("success",updatedDocter.username + " a été nommé à " + updatedChild.fname)
                                                         res.redirect("childInfo-" + req.params.childId)
                                                     }
                                                 })

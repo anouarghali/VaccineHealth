@@ -10,10 +10,10 @@ var verifyOTPparent = require("../models/otp/verifyOtpParent")
 var verifyOTPdocter = require("../models/otp/verifyOtpDocter")
 
 router.get("/otp-:email-:id", (req,res) => {
-    res.render("Parent/otp",{ otpId : req.params.id, email : req.params.email , page : "Verify Email Address"  })
+    res.render("Parent/otp",{ otpId : req.params.id, email : req.params.email , page : "Vérifier l’adresse e-mail"  })
 } )
 router.get("/otpDocter-:email-:id", (req,res) => {
-    res.render("Docter/otp",{ otpId : req.params.id, email : req.params.email , page : "Verify Email Address"  })
+    res.render("Docter/otp",{ otpId : req.params.id, email : req.params.email , page : "Vérifier l’adresse e-mail"  })
 } )
 router.post("/verifyEmailParent-:otpId",verifyOTPparent )
 router.post("/verifyEmailDocter-:otpId",verifyOTPdocter)

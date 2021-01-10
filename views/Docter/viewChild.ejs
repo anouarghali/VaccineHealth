@@ -159,19 +159,19 @@
                                  <td> <%= eachVaccine.route %> </td>
                                  <td> <%= eachVaccine.site %> </td>
                                  <% if(i == 0){ %>
-                                    <% if(i == child.vaccineNumberWorkingOn && eachVaccine.schedule == "Not Scheduled Yet" ){ %>
+                                    <% if(i == child.vaccineNumberWorkingOn && eachVaccine.schedule == "PAS ENCORE PRÉVU" ){ %>
                                         <td id="showAppointmentForm" class="btn btn-success"> Set Appointment</td>
                                     <% }else{ %>
                                         <td class="btn btn-primary"> <%= eachVaccine.schedule %>  </td>
                                     <% } %>
                                  <% }else{ %>
                                     <% if(i == child.vaccineNumberWorkingOn && child.vaccine.details[child.vaccineNumberWorkingOn-1].schedule.includes("Done") 
-                                            && eachVaccine.schedule == "Not Scheduled Yet"
+                                            && eachVaccine.schedule == "PAS ENCORE PRÉVU"
                                     ){ %>
                                         <td id="showAppointmentForm" class="btn btn-success"> Set Appointment</td>
-                                    <% }else if(eachVaccine.schedule == "Not Scheduled Yet"){ %>
+                                    <% }else if(eachVaccine.schedule == "PAS ENCORE PRÉVU"){ %>
                                         <td class="btn btn-danger"> <%= eachVaccine.schedule %> </td>
-                                    <% } else if(eachVaccine.schedule == "Reschedule Appointment"){ %>
+                                    <% } else if(eachVaccine.schedule == "Rendez-vous reprogrammé"){ %>
                                         <td id="showAppointmentForm" class="btn btn-secondary"> <%= eachVaccine.schedule %> </td>
                                     <% } else { %>
                                         <td class="btn btn-primary"> <%= eachVaccine.schedule %> </td>
@@ -193,7 +193,7 @@
       <%- include('../partials/Footer') %>
    </body>
 
-<!-- Mirrored from iqonic.design/themes/xray/html/dashboard-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2020 16:44:12 GMT -->
+<!-- Mirrored from iqonic.design/themes/xray/html/Tableau de bord-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2020 16:44:12 GMT -->
 </html>
 
 <script>

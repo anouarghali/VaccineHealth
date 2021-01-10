@@ -25,7 +25,7 @@ deleteSomeInfo = (req,res) => {
                             req.flash("error","UNEXPECTED ERROR OCCURED!!!")
                             res.redirect("indexDocter")
                         }else{
-                            req.flash("success","DATA UPDATED SUCCESSFULLY!!!")
+                            req.flash("success","Données mises à jour avec succès!!!")
                             res.redirect("profileDocter")
                         }
                     } )

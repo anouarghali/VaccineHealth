@@ -41,7 +41,7 @@ addImage = (req,res) => {
                                     req.flash("error","Unexpected Error Occured!!!")
                                     res.redirect("childInfo-" + req.params.id)
                                 }else{
-                                    req.flash("success","Profile Picture Uploaded Successfully!!!")
+                                    req.flash("success","Photo de profil téléchargée avec succès!!! »")
                                     res.redirect("childInfo-" + req.params.id)
                                 }
                             } )

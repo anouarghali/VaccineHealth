@@ -23,7 +23,7 @@ signup = (req, res) => {
                             res.redirect("/signupDocter")
                         }else{
                             if(sameEmail){
-                                req.flash("error","Email Already In Use!!!")
+                                req.flash("error","E-mail déjà utilisé!!!")
                                 res.redirect("/signupDocter")
                             }else{
                                 const smtpTrans = nodemailer.createTransport({
@@ -39,9 +39,9 @@ signup = (req, res) => {
                                 const mailOpts = {
                                     from: "ryzit1@gmail.com",
                                     to: req.body.email,
-                                    subject: 'Verify Email Address',
-                                    text: "Hi," + "\n\n" + 
-                                    "To proceed further with your account verification at VaccineHealth , Please use the 6-digit OTP given below.This OTP is only valid for 60 minutes"
+                                    subject: 'Vérifier l’adresse e-mail',
+                                    text: "Bonjour," + "\n\n" + 
+                                    "Pour procéder à la vérification de votre compte chez NoraVax , s’il vous plaît utiliser le mot de passe à 6 chiffres une fois donné ci-dessous.  Ce mot de passe unique n’est valable que 60 minutes "
                                     + "\n\n" + 
                                     otp + "\n\n" + 
                                     "Regards," +
